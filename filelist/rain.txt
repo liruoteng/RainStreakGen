@@ -1,1 +1,0 @@
-out/img100075-type1-sparse.png
