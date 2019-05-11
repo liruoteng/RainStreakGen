@@ -5,9 +5,9 @@
 streak_root = 'data/Streaks_Garg06/'; 
 image_root = 'data/BSD300/';
 img_file_list = dir([image_root, '*.jpg']); 
-num_of_strtype = 5;
+num_of_strtype = 11;
 num_of_file = length(img_file_list); 
-filelist_name = 'filelist';
+filelist_name = 'filelist'
 
 if ~exist('out', 'file')
     mkdir('out')
@@ -22,13 +22,13 @@ middle_list_stats = fopen(sprintf('%s/mid.txt', filelist_name), 'w');
 dense_list_stats = fopen(sprintf('%s/dense.txt', filelist_name), 'w'); 
 clean_list_stats = fopen(sprintf('%s/norain.txt', filelist_name), 'w'); 
 
-for fileindex = 1:num_of_file 
+for fileindex = 1%:num_of_file 
     im = imread([image_root, img_file_list(fileindex).name]); 
     [~, filename, ~] = fileparts(img_file_list(fileindex).name);
     bh = size(im, 1);
     bw = size(im, 2); 
 
-    for str_index = 1 % 4:8
+    for str_index = 1%:num_of_strtype
         
         clean_final = double(im); 
         st_final = zeros(bh, bw, 3); 

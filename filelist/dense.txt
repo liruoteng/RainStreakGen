@@ -1,0 +1,1 @@
+out/str100075-type1-dense.png
